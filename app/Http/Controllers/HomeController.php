@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $toptext    = "Dashboard";
+
+        return view('backend.index',compact('toptext'));
     }
 }

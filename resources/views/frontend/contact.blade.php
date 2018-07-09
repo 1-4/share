@@ -11,10 +11,7 @@
                         <span class="lnr lnr-home"></span>
                     </div>
                     <div class="contact-details">
-                        <h5>Binghamton, New York</h5>
-                        <p>
-                            4343 Hinkle Deegan Lake Road
-                        </p>
+                        <h5>{{ $site_config->address }}</h5>
                     </div>
                 </div>
                 <div class="single-contact-address d-flex flex-row">
@@ -22,8 +19,7 @@
                         <span class="lnr lnr-phone-handset"></span>
                     </div>
                     <div class="contact-details">
-                        <h5>00 (958) 9865 562</h5>
-                        <p>Mon to Fri 9am to 6 pm</p>
+                        <h5>{{ $site_config->phone_number }}</h5>
                     </div>
                 </div>
                 <div class="single-contact-address d-flex flex-row">
@@ -31,8 +27,7 @@
                         <span class="lnr lnr-envelope"></span>
                     </div>
                     <div class="contact-details">
-                        <h5>support@colorlib.com</h5>
-                        <p>Send us your query anytime!</p>
+                        <h5>{{ $site_config->email }}</h5>
                     </div>
                 </div>														
             </div>

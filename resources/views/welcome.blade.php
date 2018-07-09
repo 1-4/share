@@ -29,6 +29,13 @@
 			<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/main.css')}}">
+
+      <style>
+        .banner-area {
+          background: url(" {{ asset('img/banner-bg.jpg') }} ") right;
+          background-size: cover;
+        }
+      </style>
 		</head>
 		<body>	
 			  <header id="header">
@@ -36,15 +43,15 @@
 		  			<div class="container">
 				  		<div class="row align-items-center justify-content-center">
 				  			<div class="col-md-4 col-4 header-top-left no-padding">
-				        		<a href="mailto:support@colorlib.com"><span class="lnr lnr-location"></span></a>
-				        		<a class="contact-texts" href="mailto:support@colorlib.com">support@colorlib.com</a>		
+				        		<a href="mailto:{{ $site_config->email }}"><span class="lnr lnr-location"></span></a>
+				        		<a class="contact-texts" href="mailto:{{ $site_config->email }}">{{ $site_config->email }}</a>		
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-bottom no-padding">
 				        		<a href="index.html"><img class="img-fluid" src="img/logo.png" alt="" title="" /></a>			
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-right no-padding">
-				        		<a class="contact-texts" href="tel:+440 123 12 658 439">+440 123 12 658 439</a>
-				        		<a href="tel:+440 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
+				        		<a class="contact-texts" href="tel:{{ $site_config->phone_number }}">{{ $site_config->phone_number }}</a>
+				        		<a href="tel:{{ $site_config->phone_number }}"><span class="lnr lnr-phone-handset"></span></a>
 				  			</div>				  							  			
 				  		</div>			  					
 		  			</div>
@@ -73,13 +80,11 @@
 					<div class="row fullscreen d-flex align-items-center justify-content-between">
 						<div class="banner-content col-lg-6 col-md-12 ">
 							<h1 class="text-uppercase">
-								Shape your <br>
-								Perfect body			
+								{{ $site_config->top_text_banner }}		
 							</h1>
 							<p class="pt-10 pb-10 text-white">
-								Tremblant is based in Canada and has over 90 runs servicing millions of skiers each year. With 13 state-of-the-art ski lifts and a selection of choices for both snowboarders and skiers.
-							</p>
-							<a href="#" class="primary-btn">Become a Member</a>
+								{{ $site_config->top_detail_text_banner }}	
+							</p>							
 						</div>										
 					</div>
 				</div>					
@@ -514,59 +519,15 @@
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4>About Us</h4>
-								<p>
-									The state of Utah in the United States is home to lots of beautiful National Parks, & Bryce Canyon National Park ranks as three of the magnificent & awe inspiring.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4>Contact Us</h4>
-								<p>
-									56/8, rockybeach road, santa monica, Los angeles, California - 59620.
-								</p>
-								<p class="number">
-									012-6532-568-9746 <br>
-									012-6532-569-9748
-								</p>
-							</div>
-						</div>						
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4>Newsletter</h4>
-								<p>You can trust us. we only send  offers, not a single spam.</p>
-								<div class="d-flex flex-row" id="mc_embed_signup">
-
-
-									  <form class="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
-									    <div class="input-group add-on align-items-center d-flex">
-									      	<input class="form-control" name="EMAIL" placeholder="Your Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email address'" required="" type="email">
-											<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-									      <div class="input-group-btn">
-									        <button class="genric-btn"><span class="lnr lnr-arrow-right"></span></button>
-									      </div>
-									    </div>
-									      <div class="info mt-20"></div>									    
-									  </form>
-								</div>
-							</div>
-						</div>						
-					</div>
+					
 					<div class="footer-bottom row align-items-center">
 						<p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 						<div class="col-lg-6 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
+							<a href="https://{{ $site_config->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+							<a href="https://{{ $site_config->twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="https://{{ $site_config->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
