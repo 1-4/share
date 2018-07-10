@@ -75,7 +75,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="{{ route('account-setting.index') }}" class="btn btn-default btn-flat">Account</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ route('logout') }}" class="btn btn-default btn-flat" onclick="event.preventDefault();
@@ -96,8 +96,7 @@
 
   <!-- End Left side column. contains the sidebar -->
 
-  <!-- =============================================== -->
-
+  <!-- =============================================== -->  
   @yield('content')
 
   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

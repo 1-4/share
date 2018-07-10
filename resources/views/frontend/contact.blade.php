@@ -32,7 +32,7 @@
                 </div>														
             </div>
             <div class="col-lg-8">
-                <form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+                <form class="form-area contact-form text-right" id="form-contact" action="{{ route('inbox.send') }}" method="post">
                     <div class="row">	
                         <div class="col-lg-6 form-group">
                             <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
@@ -46,9 +46,10 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="alert-msg" style="text-align: left;"></div>
-                            <button class="genric-btn primary" style="float: right;">Send Message</button>											
+                            <button type="submit" class="genric-btn primary" onclick="$this.form.submit()" style="float: right;">Send Message</button>											
                         </div>
                     </div>
+                    {{ csrf_field() }}
                 </form>	
             </div>
         </div>

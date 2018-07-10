@@ -53,10 +53,19 @@
         <li>
           <a href="/inbox">
             <i class="fa fa-envelope"></i> <span>Inbox</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right">
+                @if (App\Inbox::count() > 0)
+                    {{ App\Inbox::where('read', 0)->count() }}
+                @else
+                    0
+                @endif
+              </span>
+            </span>
           </a>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="{{ route('account-setting.index') }}">
             <i class="fa fa-user"></i> <span>Account</span>            
           </a>
         </li>        

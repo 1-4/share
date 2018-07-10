@@ -23,4 +23,6 @@ class SiteConfig extends Model
         'instagram',
         'twitter',
     ];
+
+    public $timestamps = false;
 }

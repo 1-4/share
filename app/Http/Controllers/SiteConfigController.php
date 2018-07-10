@@ -8,32 +8,82 @@ use \Image;
 
 class SiteConfigController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $toptext    = 'Site Config';
 
-        return view('backend.siteconfig',compact('toptext'));
+        $site_config = SiteConfig::first();
+
+        return view('backend.siteconfig',compact('toptext','site_config'));
     }
 
     public function store(Request $request)
     {
         
+        /* General */
+        if(!empty($request->logo)){
+        
+            // $getimageName = 'logo.'.$request->logo->getClientOriginalExtension();
+            $getimageName1 = 'logo.png';
 
-        $getimageName = 'logo.'.$request->logo->getClientOriginalExtension();
+            $request->logo->move(public_path('img'), $getimageName1);        
 
-        $request->logo->move(public_path('img'), $getimageName);
+            $this->resizeImage(155, 40, $getimageName1, public_path('img'));        
 
-        // $img = Image::make('images/'.$getimageName);
+        }
 
-        // $img->resize(320, 240);
+        if(!empty($request->top_img_banner)){
+                    
+            $getimageName2 = 'banner-bg.jpg';
 
-        // $img->save('images/'.$getimageName);
+            $request->top_img_banner->move(public_path('img'), $getimageName2);        
 
-        // $logo = 'logo1.'.$request->logo->getClientOriginalExtension();
+            $this->resizeImage(1920, 840, $getimageName2, public_path('img'));        
 
-        $this->resizeImage(155, 40, $getimageName, public_path('img'));
+        }
 
-        return redirect()->back();
+        if(!empty($request->top_text_banner)){
+            SiteConfig::first()->update(['top_text_banner' => $request->top_text_banner]);
+        }
+
+        if(!empty($request->top_detail_text_banner)){
+            SiteConfig::first()->update(['top_detail_text_banner' => $request->top_detail_text_banner]);
+        }
+
+        /* General information */
+        if(!empty($request->email)){
+            SiteConfig::first()->update(['email' => $request->email]);
+        }
+
+        if(!empty($request->phone_number)){
+            SiteConfig::first()->update(['phone_number' => $request->phone_number]);
+        }
+
+        if(!empty($request->address)){
+            SiteConfig::first()->update(['address' => $request->address]);
+        }
+
+        /* Social media */
+        if(!empty($request->facebook)){
+            SiteConfig::first()->update(['facebook' => $request->facebook]);
+        }
+
+        if(!empty($request->instagram)){
+            SiteConfig::first()->update(['instagram' => $request->instagram]);
+        }
+
+        if(!empty($request->twitter)){
+            SiteConfig::first()->update(['twitter' => $request->twitter]);
+        }
+
+
+
+        return redirect()->back()->with('message', 'Has been save.');
     }
 
     public function resizeImage($width, $height, $imageName, $path)

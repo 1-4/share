@@ -34,4 +34,11 @@ Route::group(['prefix' => 'page-setting'], function(){
 Route::get('/site-config', 'SiteConfigController@index')->name('siteConfig.index');
 Route::post('/site-config-store', 'SiteConfigController@store')->name('siteConfig.store');
 
+Route::get('/account-setting', 'AccountController@index')->name('account-setting.index');
+Route::post('/account-setting-store', 'AccountController@store')->name('account-setting.store');
+
 Route::get('/inbox', 'BackendController@inbox')->name('inbox');
+Route::get('/inbox/read/{id}', 'BackendController@readInbox')->name('inbox.read');
+Route::get('/inbox/delete/{id}', 'BackendController@destroy')->name('inbox.delete');
+Route::get('/inbox/delete-all', 'BackendController@inboxDeleteAll')->name('inbox.deleteAll');
+Route::post('/send', 'InboxController@store')->name('inbox.send');

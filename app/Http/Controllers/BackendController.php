@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\AboutPage;
+use App\Inbox;
 
 class BackendController extends Controller
 {
@@ -56,8 +57,32 @@ class BackendController extends Controller
     public function inbox()
     {
         $toptext    = 'Inbox';
+        $inboxs     = Inbox::orderBy('created_at','desc')->paginate(10);
 
-        return view('backend.inbox',compact('toptext'));
+        return view('backend.inbox',compact('toptext','inboxs'));
+    }
+
+    public function readInbox($id)
+    {
+        $inbox      = Inbox::find($id);
+        $inbox->update(['read' => 1]);
+        return view('backend.inboxdetail', compact('inbox'));
+    }
+
+    public function destroy($id)
+    {
+        $inbox      = Inbox::find($id);
+
+        $inbox->delete();
+
+        return redirect()->back();
+    }
+
+    public function inboxDeleteAll()
+    {
+        Inbox::truncate();        
+
+        return redirect()->back();
     }
 
 
