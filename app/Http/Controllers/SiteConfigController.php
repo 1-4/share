@@ -22,6 +22,15 @@ class SiteConfigController extends Controller
         return view('backend.siteconfig',compact('toptext','site_config'));
     }
 
+    public function res()
+    {
+        $this->resizeImage(640, 800, 'g6.jpg', public_path('img/gallery'));
+        // $this->resizeImage(640, 800, 'g2.jpg', public_path('img/gallery'));
+        // $this->resizeImage(640, 800, 'g3.jpg', public_path('img/gallery'));
+        // $this->resizeImage(640, 800, 'g4.jpg', public_path('img/gallery'));
+        // $this->resizeImage(640, 800, 'g5.jpg', public_path('img/gallery'));
+    }
+
     public function store(Request $request)
     {
         

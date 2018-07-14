@@ -60,13 +60,13 @@
 			    	<div class="row align-items-center justify-content-center">	
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
-							    <li class="menu-active"><a href="/">Home</a></li>
-                                <li><a href="about">About</a></li>
-                                <li><a href="services">Services</a></li>
-                                <li><a href="trainers.html">Staff</a></li>						
-                                <li><a href="trainers.html">News</a></li>
-                                <li><a href="gallery">Gallery</a></li>
-                                <li><a href="contact">Contact</a></li>
+							    <li class="menu-active"><a href="{{ route('frontend.index') }}">Home</a></li>
+                  <li><a href="{{ route('frontend.about') }}">About</a></li>
+                  <li><a href="{{ route('frontend.services') }}">Services</a></li>
+                  <li><a href="trainers.html">Staff</a></li>						
+                  <li><a href="{{ route('frontend.news') }}">News</a></li>
+                  <li><a href="{{ route('frontend.gallery') }}">Gallery</a></li>
+                  <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		
 			    	</div>
@@ -89,188 +89,7 @@
 					</div>
 				</div>					
 			</section>
-			<!-- End banner Area -->	
-
-			<!-- Start top-course Area -->
-			<section class="top-course-area section-gap">
-				<div class="container">
-					<div class="row section-title">
-						<h1>Top Courses That are being Offered</h1>
-						<p>As you pour the first glass of your favorite Chianti</p>
-					</div>	
-					<div class="row">
-						<div class="active-topcourse-carusel">
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c1.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Target Specific Muscle</h4>
-									</a>
-									<h4 class="price">$275</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c2.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Weightlifting</h4>
-									</a>
-									<h4 class="price">$200</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c3.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Flex your muscle</h4>
-									</a>
-									<h4 class="price">$225</h4>
-								</div>
-							</div>	
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c1.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Target Specific Muscle</h4>
-									</a>
-									<h4 class="price">$275</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c2.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Weightlifting</h4>
-									</a>
-									<h4 class="price">$200</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c3.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Flex your muscle</h4>
-									</a>
-									<h4 class="price">$225</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c1.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Target Specific Muscle</h4>
-									</a>
-									<h4 class="price">$275</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c2.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Weightlifting</h4>
-									</a>
-									<h4 class="price">$200</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c3.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Flex your muscle</h4>
-									</a>
-									<h4 class="price">$225</h4>
-								</div>
-							</div>	
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c1.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Target Specific Muscle</h4>
-									</a>
-									<h4 class="price">$275</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c2.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Weightlifting</h4>
-									</a>
-									<h4 class="price">$200</h4>
-								</div>
-							</div>
-							<div class="single-carusel item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/c3.jpg" alt="">
-									<div class="join-btn"><a href="#">Join Now</a></div>
-								</div>
-								<div class="title-price d-flex justify-content-between">
-									<a href="#">
-										<h4>Flex your muscle</h4>
-									</a>
-									<h4 class="price">$225</h4>
-								</div>
-							</div>																												
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End top-course Area -->
-			
-			<!-- Start cta Area -->
-			<section class="cta-area">
-				<div class="container-fluid">
-					<div class="row no-padding">
-						<div class="col-lg-6 single-cta cta1 no-padding section-gap relative">
-							<div class="overlay overlay-bg"></div>
-							<h6 class=text-uppercase>Book an appointment</h6>
-							<h1>Get into shape now</h1>
-							<a href="#" class="primary-btn">Book Now</a>
-						</div>
-						<div class="col-lg-6 single-cta cta2 no-padding section-gap relative">
-							<div class="overlay overlay-bg"></div>
-							<h6 class=text-uppercase>Book an appointment</h6>
-							<h1>Get into shape now</h1>
-							<a href="#" class="primary-btn">Book Now</a>			
-		
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End cta Area -->
+			<!-- End banner Area -->						
 			
 			<!-- Start feature Area -->
 			<section class="feature-area section-gap">
@@ -306,41 +125,7 @@
 					</div>
 				</div>	
 			</section>
-			<!-- End feature Area -->
-			
-			<!-- Start calculation Area -->
-			<section class="aclculation-area section-gap relative">
-				<div class="overlay overlay-bg"></div>				
-				<div class="container">
-					<div class="row section-title relative">
-						<h1 class="text-white">Calculate Your Body Mass Index</h1>
-						<p class="text-white">You love having a second home but the mortgage</p>
-					</div>					
-					<div class="row justify-content-center align-items-center">
-						<div class="col-lg-3 title-row">
-							<p class="text-white">Your Height(inches)</p>
-						</div>
-						<div class="col-lg-3">
-							<input type="text" class="form-control" name="height" placeholder="Enter Value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Value '" >
-						</div>
-						<div class="col-lg-3">
-							<input type="text" class="form-control" name="height" placeholder="Enter Value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Value '" >
-						</div>					
-					</div>
-					<div class="row justify-content-center align-items-center pt-30">
-						<div class="col-lg-3 title-row">
-							<p class="text-white">Your Weight(Ibs)</p>
-						</div>
-						<div class="col-lg-3">
-							<input type="text" class="form-control" name="height" placeholder="Enter Value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Value '" >
-						</div>
-						<div class="col-lg-3">
-							<a href="#" class="primary-btn">Calculate Your BMI</a>
-						</div>							
-					</div>
-				</div>	
-			</section>
-			<!-- End calculation Area -->
+			<!-- End feature Area -->			
 			
 			<!-- Start image-gallery Area -->
 			<section class="image-gallery-area section-gap">
@@ -351,16 +136,16 @@
 					</div>					
 					<div class="row">
 						<div class="col-lg-4 single-gallery">
-							<a href="img/g1.jpg" class="img-gal"><img class="img-fluid" src="img/g1.jpg" alt=""></a>
-							<a href="img/g4.jpg" class="img-gal"><img class="img-fluid" src="img/g4.jpg" alt=""></a>
+							<a href="img/gallery/g1.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g1.jpg" alt=""></a>
+							<a href="img/gallery/g2.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g2.jpg" alt=""></a>
 						</div>	
 						<div class="col-lg-4 single-gallery">
-							<a href="img/g2.jpg" class="img-gal"><img class="img-fluid" src="img/g2.jpg" alt=""></a>
-							<a href="img/g5.jpg" class="img-gal"><img class="img-fluid" src="img/g5.jpg" alt=""></a>						
+							<a href="img/gallery/g3.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g3.jpg" alt=""></a>
+							<a href="img/gallery/g4.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g4.jpg" alt=""></a>
 						</div>	
 						<div class="col-lg-4 single-gallery">
-							<a href="img/g3.jpg" class="img-gal"><img class="img-fluid" src="img/g3.jpg" alt=""></a>
-							<a href="img/g6.jpg" class="img-gal"><img class="img-fluid" src="img/g6.jpg" alt=""></a>
+							<a href="img/gallery/g5.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g5.jpg" alt=""></a>
+							<a href="img/gallery/g6.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g6.jpg" alt=""></a>
 						</div>				
 					</div>
 				</div>	

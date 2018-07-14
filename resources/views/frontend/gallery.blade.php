@@ -10,17 +10,17 @@
         </div>					
         <div class="row">
             <div class="col-lg-4 single-gallery">
-                <a href="img/g1.jpg" class="img-gal"><img class="img-fluid" src="img/g1.jpg" alt=""></a>
-                <a href="img/g4.jpg" class="img-gal"><img class="img-fluid" src="img/g4.jpg" alt=""></a>
-            </div>	
-            <div class="col-lg-4 single-gallery">
-                <a href="img/g2.jpg" class="img-gal"><img class="img-fluid" src="img/g2.jpg" alt=""></a>
-                <a href="img/g5.jpg" class="img-gal"><img class="img-fluid" src="img/g5.jpg" alt=""></a>						
-            </div>	
-            <div class="col-lg-4 single-gallery">
-                <a href="img/g3.jpg" class="img-gal"><img class="img-fluid" src="img/g3.jpg" alt=""></a>
-                <a href="img/g6.jpg" class="img-gal"><img class="img-fluid" src="img/g6.jpg" alt=""></a>
-            </div>				
+							<a href="img/gallery/g1.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g1.jpg" alt=""></a>
+							<a href="img/gallery/g2.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g2.jpg" alt=""></a>
+						</div>	
+						<div class="col-lg-4 single-gallery">
+							<a href="img/gallery/g3.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g3.jpg" alt=""></a>
+							<a href="img/gallery/g4.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g4.jpg" alt=""></a>
+						</div>	
+						<div class="col-lg-4 single-gallery">
+							<a href="img/gallery/g5.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g5.jpg" alt=""></a>
+							<a href="img/gallery/g6.jpg" class="img-gal"><img class="img-fluid" src="img/gallery/g6.jpg" alt=""></a>
+						</div>			
         </div>
     </div>	
 </section>

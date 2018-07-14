@@ -46,7 +46,7 @@
           </ul>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="{{ route('post.list') }}">
             <i class="fa fa-edit"></i> <span>Post</span>            
           </a>
         </li>

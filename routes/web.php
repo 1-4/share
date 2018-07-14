@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', 'FrontendController@index');
+Route::get('/', 'FrontendController@index')->name('frontend.index');
 
-Route::get('/about', 'FrontendController@about');
-Route::get('/contact', 'FrontendController@contact');
-Route::get('/services', 'FrontendController@services');
-Route::get('/gallery', 'FrontendController@gallery');
-
+Route::get('/about', 'FrontendController@about')->name('frontend.about');
+Route::get('/contact', 'FrontendController@contact')->name('frontend.contact');
+Route::get('/services', 'FrontendController@services')->name('frontend.services');
+Route::get('/gallery', 'FrontendController@gallery')->name('frontend.gallery');
+Route::get('/news-page','FrontendController@news')->name('frontend.news');
+Route::get('/news-page/{id}/detail','FrontendController@newsDetail')->name('frontend.newsdetail');
 
 
 Auth::routes();
@@ -42,3 +43,11 @@ Route::get('/inbox/read/{id}', 'BackendController@readInbox')->name('inbox.read'
 Route::get('/inbox/delete/{id}', 'BackendController@destroy')->name('inbox.delete');
 Route::get('/inbox/delete-all', 'BackendController@inboxDeleteAll')->name('inbox.deleteAll');
 Route::post('/send', 'InboxController@store')->name('inbox.send');
+
+Route::get('/new-post','NewsController@index')->name('post.index');
+Route::get('/post-list','NewsController@postList')->name('post.list');
+Route::post('/post-store','NewsController@store')->name('post.store');
+Route::get('/post-edit/{id}','NewsController@edit')->name('post.edit');
+Route::post('/post-update/{id}','NewsController@update')->name('post.update');
+
+Route::get('/res', 'SiteConfigController@res');
