@@ -47,7 +47,7 @@
 				        		<a class="contact-texts" href="mailto:{{ $site_config->email }}">{{ $site_config->email }}</a>		
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-bottom no-padding">
-				        		<a href="index.html"><img class="img-fluid" src="img/logo.png" alt="" title="" /></a>			
+				        		<a href="{{ route('frontend.index') }}"><img class="img-fluid" src="img/logo.png" alt="" title="" /></a>			
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-right no-padding">
 				        		<a class="contact-texts" href="tel:{{ $site_config->phone_number }}">{{ $site_config->phone_number }}</a>
@@ -63,7 +63,7 @@
 							    <li class="menu-active"><a href="{{ route('frontend.index') }}">Home</a></li>
                   <li><a href="{{ route('frontend.about') }}">About</a></li>
                   <li><a href="{{ route('frontend.services') }}">Services</a></li>
-                  <li><a href="trainers.html">Staff</a></li>						
+                  <li><a href="{{ route('frontend.staff') }}">Staff</a></li>						
                   <li><a href="{{ route('frontend.news') }}">News</a></li>
                   <li><a href="{{ route('frontend.gallery') }}">Gallery</a></li>
                   <li><a href="{{ route('frontend.contact') }}">Contact</a></li>

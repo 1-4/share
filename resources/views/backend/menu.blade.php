@@ -39,10 +39,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/page-setting/about"><i class="fa fa-circle-o"></i> About</a></li>
-            <li><a href="/page-setting/about"><i class="fa fa-circle-o"></i> Gallery</a></li>
-            <li><a href="/page-setting/about"><i class="fa fa-circle-o"></i> Staff</a></li>
-            <li><a href="/page-setting/about"><i class="fa fa-circle-o"></i> Services</a></li>
+            <li><a href="{{ route('page-setting.about') }}"><i class="fa fa-circle-o"></i> About</a></li>
+            <li><a href="{{ route('page-setting.gallery') }}"><i class="fa fa-circle-o"></i> Gallery</a></li>
+            <li><a href="{{ route('page-setting.staff') }}"><i class="fa fa-circle-o"></i> Staff</a></li>
+            {{-- <li><a href="/page-setting/about"><i class="fa fa-circle-o"></i> Services</a></li> --}}
           </ul>
         </li>
         <li>

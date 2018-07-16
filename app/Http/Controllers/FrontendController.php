@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\AboutPage;
 use App\SiteConfig;
 use App\News;
+use App\Gallery;
+use App\Staff;
 
 class FrontendController extends Controller
 {
@@ -50,8 +52,19 @@ class FrontendController extends Controller
         $toptext = 'Gallery';
         $breadcrumb = 'Gallery';
         $site_config = SiteConfig::first();
+        $gallerys = Gallery::paginate(10);
 
-        return view('frontend.gallery',compact('toptext','breadcrumb','site_config'));
+        return view('frontend.gallery',compact('gallerys','toptext','breadcrumb','site_config'));
+    }    
+
+    public function staff()
+    {
+        $toptext = 'Staff';
+        $breadcrumb = 'Staff';
+        $site_config = SiteConfig::first();
+        $staffs = Staff::paginate(10);
+
+        return view('frontend.staff',compact('toptext','breadcrumb','site_config','staffs'));
     }
 
     public function news()

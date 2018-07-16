@@ -15,6 +15,7 @@ Route::get('/', 'FrontendController@index')->name('frontend.index');
 
 Route::get('/about', 'FrontendController@about')->name('frontend.about');
 Route::get('/contact', 'FrontendController@contact')->name('frontend.contact');
+Route::get('/staff', 'FrontendController@staff')->name('frontend.staff');
 Route::get('/services', 'FrontendController@services')->name('frontend.services');
 Route::get('/gallery', 'FrontendController@gallery')->name('frontend.gallery');
 Route::get('/news-page','FrontendController@news')->name('frontend.news');
@@ -29,6 +30,15 @@ Route::group(['prefix' => 'page-setting'], function(){
 
     Route::get('/about', 'BackendController@about')->name('page-setting.about');
     Route::post('/about-store', 'BackendController@aboutStore')->name('page-setting.aboutStore');
+
+    Route::get('gallery', 'BackendController@gallery')->name('page-setting.gallery');
+    Route::post('gallery-store', 'BackendController@galleryStore')->name('page-setting.galleryStore');
+    Route::get('gallery-delete/{id}', 'BackendController@galleryDestroy')->name('page-setting.galleryDestroy');
+
+    Route::get('staff', 'BackendController@staff')->name('page-setting.staff');
+    Route::post('staff-store', 'BackendController@staffStore')->name('page-setting.staffStore');
+    Route::get('staff-delete/{id}', 'BackendController@staffDestroy')->name('page-setting.staffDestroy');
+
 
 });
 

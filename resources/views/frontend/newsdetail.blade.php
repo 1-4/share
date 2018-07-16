@@ -71,7 +71,7 @@
                     <p class="view col-lg-12 col-md-12 col-6"><a href="#">{{ Carbon\Carbon::parse($news->created_at)->diffForHumans() }}</a></p>	
 
                     @if(Auth::check())
-										  <p class="view col-lg-12 col-md-12 col-6"><a href="{{ route('post.edit', $news->id) }}"> Edit Post <i class="fa fa-edit"></i></a> </p>
+										  <p class="view col-lg-12 col-md-12 col-6"><a href="{{ route('post.edit', $news->id) }}  "> Edit Post <i class="fa fa-edit"></i></a> </p>
                     @endif																	
 									</div>
 								</div>

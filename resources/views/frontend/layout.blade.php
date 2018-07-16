@@ -40,7 +40,7 @@
 				        		<a class="contact-texts" href="mailto:{{ $site_config->email }}">{{ $site_config->email }}</a>		
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-bottom no-padding">
-				        		<a href="index.html"><img class="img-fluid" src="img/logo.png" alt="" title="" /></a>			
+				        		<a href="{{ route('frontend.index') }}"><img class="img-fluid" src="img/logo.png" alt="" title="" /></a>			
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-right no-padding">
 				        		<a class="contact-texts" href="tel:{{ $site_config->phone_number }}">{{ $site_config->phone_number }}</a>
@@ -60,7 +60,7 @@
 							<h1 class="text-white">
 								{{ $toptext }}			
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="#"> {{ $breadcrumb }}</a></p>
+							<p class="text-white link-nav"><a href="{{ route('frontend.index') }}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="#"> {{ $breadcrumb }}</a></p>
 						</div>	
 					</div>
 				</div>

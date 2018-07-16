@@ -72,7 +72,7 @@
 									</div>
 									<a class="posts-title" href="{{ route('frontend.newsdetail',$news->id) }}"><h3>{{ title_case($news->title) }}</h3></a>
 									<p class="excert">
-                  {!! str_limit($news->content,200) !!}
+                  {!! str_replace(['<div>','</div>'],['',''],str_limit($news->content,150)) !!}
 									</p>
 									<a href="{{ route('frontend.newsdetail',$news->id) }}" class="primary-btn">View More</a>
 								</div>
@@ -112,7 +112,7 @@
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap">																
 								<div class="single-sidebar-widget popular-post-widget">
-									<h4 class="popular-title">New Posts</h4>
+									<h4 class="popular-title">Lastes Posts</h4>
 									<div class="popular-post-list">										
                     @forelse($new_post as $post)
                       <div class="single-post-list d-flex flex-row align-items-center">
